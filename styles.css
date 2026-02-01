@@ -718,12 +718,21 @@ p {
 }
 
 .ongoing-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px; /* Optional: set a minimum height if cards vary */
+
     background: var(--bg-beige);
     padding: 35px 25px;
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+}
+
+.ongoing-card > button.register-btn {
+    margin-top: auto;
+  align-self: stretch; /* Optional: makes button full-width */
 }
 
 .ongoing-card:hover {
@@ -866,12 +875,21 @@ p {
 }
 
 .involvement-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px; /* Optional: set a minimum height if cards vary */
+
     background: var(--white);
     padding: 40px;
     border-radius: 12px;
     box-shadow: var(--shadow);
     text-align: center;
     transition: all 0.3s ease;
+}
+
+.involvement-card > a.btn {
+  margin-top: auto;
+  align-self: stretch; /* Optional: makes button full-width */
 }
 
 .involvement-card:hover {
