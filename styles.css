@@ -71,10 +71,28 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Zain', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Zain", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Zain", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+p {
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
@@ -123,7 +141,7 @@ body {
 
 .logo-name {
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--primary-color);
     line-height: 1.2;
 }
@@ -256,6 +274,7 @@ body {
 
 /* Buttons */
 .btn {
+    font-family: 'Zain', sans-serif;
     padding: 14px 32px;
     border-radius: 8px;
     text-decoration: none;
