@@ -308,6 +308,18 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
+.btn-support {
+    background: #F17532;
+    color: var(--white);
+}
+
+.btn-support:hover {
+    background: #d96a2e;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+
 .btn-outline {
     background: transparent;
     border: 2px solid var(--primary-color);
@@ -362,6 +374,10 @@ p {
 .section-header p {
     font-size: 1.2rem;
     color: var(--text-light);
+}
+
+.donate-section-header {
+    
 }
 
 /* About Section */
@@ -472,7 +488,7 @@ p {
 /* Impact Section */
 .impact {
     padding: 100px 20px;
-    background: var(--white);
+    background: var(--bg-beige);
 }
 
 .impact h2 {
@@ -586,7 +602,7 @@ p {
 
 /* Upcoming Programs */
 .upcoming-programs {
-    margin-bottom: 80px;
+
 }
 
 .upcoming-programs h3 {
@@ -865,7 +881,8 @@ p {
 /* Get Involved Section */
 .get-involved {
     padding: 100px 20px;
-    background: var(--bg-beige);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
 }
 
 .involvement-options {
@@ -926,7 +943,6 @@ p {
 .donate {
     padding: 100px 20px;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: var(--white);
 }
 
 .donate-content {
@@ -1253,6 +1269,7 @@ p {
     .mission h2,
     .impact h2 {
         font-size: 2rem;
+        
     }
 
     .donation-amounts {

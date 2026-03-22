@@ -115,7 +115,7 @@ contactForm.addEventListener('submit', function(e) {
     
     // Build the mailto link
     const mailtoSubject = encodeURIComponent('Contact Form: ' + subject);
-    const mailtoLink = 'mailto:info@amyc.org?subject=' + mailtoSubject + '&body=' + body;
+    const mailtoLink = 'mailto:arif.amyc@gmail.com?subject=' + mailtoSubject + '&body=' + body;
     
     // Open the user's email client
     window.location.href = mailtoLink;
