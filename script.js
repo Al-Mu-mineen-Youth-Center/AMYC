@@ -67,31 +67,6 @@ amountButtons.forEach(button => {
     });
 });
 
-// Allow custom input to deactivate preset buttons
-donorAmountInput.addEventListener('input', () => {
-    const currentValue = donorAmountInput.value;
-    let matchFound = false;
-    
-    amountButtons.forEach(button => {
-        const buttonAmount = button.getAttribute('data-amount');
-        if (buttonAmount === currentValue) {
-            button.classList.add('active');
-            matchFound = true;
-        } else {
-            button.classList.remove('active');
-        }
-    });
-    
-    // If no match found and value exists, activate custom button
-    if (!matchFound && currentValue) {
-        amountButtons.forEach(button => {
-            if (button.getAttribute('data-amount') === 'custom') {
-                button.classList.add('active');
-            }
-        });
-    }
-});
-
 // Contact Form Handler
 const contactForm = document.getElementById('contactForm');
 
@@ -122,42 +97,6 @@ contactForm.addEventListener('submit', function(e) {
     
     // Optional: Show confirmation message
     alert('Thank you for your message! Your email client will open to send your message.');
-});
-
-// Donation Form Handler
-const donationForm = document.getElementById('donationForm');
-
-donationForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('donor-name').value;
-    const email = document.getElementById('donor-email').value;
-    const phone = document.getElementById('donor-phone').value;
-    const amount = document.getElementById('donor-amount').value;
-    const message = document.getElementById('donor-message').value;
-    
-    // Build the email body with proper line breaks
-    let body = 'DONATION REQUEST%0D%0A';
-    body += '===================%0D%0A%0D%0A';
-    body += 'Name: ' + name + '%0D%0A';
-    body += 'Email: ' + email + '%0D%0A';
-    if (phone) {
-        body += 'Phone: ' + phone + '%0D%0A';
-    }
-    body += 'Donation Amount: $' + amount + '%0D%0A';
-    if (message) {
-        body += '%0D%0AMessage:%0D%0A' + encodeURIComponent(message);
-    }
-    
-    // Build the mailto link
-    const subject = encodeURIComponent('Donation Request - $' + amount);
-    const mailtoLink = 'mailto:info@amyc.org?subject=' + subject + '&body=' + body;
-    
-    // Open the user's email client
-    window.location.href = mailtoLink;
-    
-    // Optional: Show confirmation message
-    alert('Thank you for your generous donation! Your email client will open to complete the donation process.');
 });
 
 // Animate elements on scroll
