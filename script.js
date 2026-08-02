@@ -262,7 +262,7 @@ registrationForm.addEventListener('submit', function(e) {
     
     // Build the mailto link
     const subject = encodeURIComponent('Program Registration: ' + selectedProgram + ' - ' + studentName);
-    const mailtoLink = 'mailto:info@amyc.org?subject=' + subject + '&body=' + body;
+    const mailtoLink = 'mailto:arif.amyc@gmail.com?subject=' + subject + '&body=' + body;
     
     // Open the user's email client
     window.location.href = mailtoLink;
